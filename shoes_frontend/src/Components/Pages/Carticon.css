@@ -1,0 +1,17 @@
+/* CartIcon.css */
+.cart-icon-container {
+  cursor: pointer;
+  color: white;
+  z-index: 2000; /* Ensure it stays on top */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+.cart-icon-container span {
+  margin: 0 !important;
+}
+
+.cart-icon-container:hover {
+  color: #fc2525;
+}

@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+  color: #fff;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  height: 80px; /* Adjust as needed */
+  border: none;
+  border-radius: 50%;
+  margin-right: 10px; /* Adjust spacing */
+}
+
+.header__logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 26px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Adjust spacing between nav items */
+  margin: 0;
+}
+
+.header__nav a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+}
+
+.header__nav a:hover {
+  color: #ff6347; /* Tomato color for hover effect */
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+}
+
+.header__search input {
+  padding: 6px 3px; /* Adjust padding */
+  font-size: 1em;
+  border-radius: 3px;
+  border: 2px solid #fff;
+}
+.header__search input:focus,
+.header__search input:focus-visible {
+  outline: none;
+}
+
+.header__search button {
+  padding: 10px;
+  background-color: transparent; /* Tomato color for button */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  margin: 0;
+  margin-left: 4px;
+  border-radius: 50%;
+  transition: all 0.2s linear;
+}
+
+.header__search button:hover {
+  box-shadow: 0 0 4px #fff;
+  background: transparent !important;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+}
+
+.header__icons > * {
+  margin-left: 10px; /* Adjust spacing between icons */
+  color: #fff;
+  font-size: 1.5em; /* Adjust icon size */
+  text-decoration: none;
+  position: relative;
+}
+
+/* .header__icons > *:hover {
+  color: #ff6347;
+} */
+
+.wishlist-count {
+  position: absolute;
+  top: -10px; /* Adjust vertical position */
+  right: -10px; /* Adjust horizontal position */
+  background-color: #ff6347; /* Tomato color for count background */
+  color: #fff;
+  font-size: 0.8em; /* Adjust font size */
+  padding: 2px 6px; /* Adjust padding */
+  border-radius: 50%; /* Make it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px; /* Ensure it's a circle even with single digits */
+  height: 20px; /* Ensure it's a circle even with single digits */
+  line-height: 1; /* Adjust line height */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+  .header__logo img {
+    height: 70px; /* Adjust as needed */
+  }
+
+  .header__logo a {
+    font-size: 1.7em;
+  }
+
+  .header__nav ul {
+    gap: 15px; /* Adjust spacing between nav items */
+  }
+
+  .header__search input {
+    padding: 7px; /* Adjust padding */
+    font-size: 0.9em;
+    width: 120px;
+  }
+
+  .header__search button {
+    padding: 7px 10px; /* Adjust padding */
+  }
+
+  .header__icons > * {
+    font-size: 1.4em; /* Adjust icon size */
+  }
+}
+
+@media (max-width: 992px) {
+  .header__logo img {
+    height: 60px; /* Adjust as needed */
+  }
+
+  .header__logo a {
+    font-size: 1.5em;
+  }
+
+  .header__nav ul {
+    gap: 10px; /* Adjust spacing between nav items */
+  }
+
+  .header__search input {
+    padding: 6px; /* Adjust padding */
+    font-size: 0.8em;
+  }
+
+  .header__search button {
+    padding: 6px 8px; /* Adjust padding */
+  }
+
+  .header__icons > * {
+    font-size: 1.3em; /* Adjust icon size */
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    /* flex-direction: column;
+    align-items: flex-start; */
+    padding: 10px;
+  }
+
+  .header__logo {
+    margin-bottom: 10px; /* Adjust spacing */
+  }
+
+  .header__logo img {
+    height: 50px; /* Adjust as needed */
+  }
+
+  .header__logo a {
+    font-size: 1.3em;
+  }
+
+  .header__nav ul {
+    flex-direction: column;
+    gap: 5px; /* Adjust spacing between nav items */
+  }
+
+  .header__search input {
+    padding: 5px; /* Adjust padding */
+    font-size: 0.7em;
+  }
+
+  .header__search button {
+    padding: 5px 7px; /* Adjust padding */
+  }
+
+  .header__icons {
+    margin-top: 10px; /* Adjust spacing */
+  }
+
+  .header__icons > * {
+    font-size: 1.2em; /* Adjust icon size */
+  }
+}
+
+@media (max-width: 576px) {
+  .header__logo img {
+    height: 40px; /* Adjust as needed */
+  }
+
+  .header__logo a {
+    font-size: 1.1em;
+  }
+
+  .header__nav a {
+    font-size: 0.9em;
+  }
+
+  .header__search input {
+    padding: 4px; /* Adjust padding */
+    font-size: 0.6em;
+  }
+
+  .header__search button {
+    padding: 4px 6px; /* Adjust padding */
+  }
+
+  .header__icons > * {
+    font-size: 1em; /* Adjust icon size */
+  }
+
+  .wishlist-count {
+    font-size: 0.7em; /* Adjust font size */
+    min-width: 18px; /* Ensure it's a circle even with single digits */
+    height: 18px; /* Ensure it's a circle even with single digits */
+  }
+}
+
+.ham-menu {
+  /* margin-right: 20px; */
+  cursor: pointer;
+  transition: all 0.5s ease;
+  position: relative;
+  z-index: 3000;
+}
+
+.ham-bg {
+  position: absolute;
+  background-color: transparent;
+  width: 40px;
+  height: 35px;
+  transform: translate(-100%, -50%);
+  cursor: pointer;
+  z-index: 3000;
+}
+
+.mobile-close-x {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 40px 55px;
+  z-index: 5000;
+  cursor: pointer;
+}
+
+.mobile-close-x-i {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.ham-menu:hover .line {
+  background-color: #ff6347;
+}
+
+.ham-menu .line {
+  transition: all 0.3s ease;
+  height: 4px;
+  width: 40px;
+  margin: 8px 0;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -200%);
+}
+
+.ham-menu .line-1 {
+  transform: translate(-100%, -500%);
+}
+
+.ham-menu .line-3 {
+  transform: translate(-100%, 100%);
+}
+
+.ham-menu.active .line {
+  transform: translate(-100%, -200%);
+  transform-origin: center center;
+}
+
+.ham-menu.active .line-1 {
+  transform: translate(-100%, -200%) rotate(45deg);
+}
+
+.ham-menu.active .line-2 {
+  opacity: 0;
+}
+
+.ham-menu.active .line-3 {
+  transform: translate(-100%, -200%) rotate(-45deg);
+}
+
+.mobile-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  padding: 20px;
+  padding-top: 80px;
+  right: -250px;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 3000;
+  background-color: #333;
+  color: #fff;
+  transition: all 0.5s ease-in;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu .header__nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+.mobile-menu .header__search input {
+  padding: 5px 7px;
+  font-size: 14px;
+}

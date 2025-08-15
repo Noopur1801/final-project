@@ -1,0 +1,118 @@
+{
+	"info": {
+		"_postman_id": "4d990950-9992-4ae9-91a4-712718e6aeaf",
+		"name": "Shoes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33063028"
+	},
+	"item": [
+		{
+			"name": "Get all shoes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/api/shoes/collections"
+			},
+			"response": []
+		},
+		{
+			"name": "Get shoes by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/api/shoes/collections/66842c5c8aff228ef4bd2931"
+			},
+			"response": []
+		},
+		{
+			"name": "Add new shoes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n  {\r\n    \"name\": \"Kids' Sneakers\",\r\n    \"description\": \"Trendy sneakers for active kids.\",\r\n    \"price\": 2599,\r\n    \"ratings\": 4.4,\r\n    \"images\": [\r\n      {\r\n        \"public_id\": \"kids_sneakers_001\",\r\n        \"url\": \"https://example.com/images/kids_sneakers_001.jpg\"\r\n      }\r\n    ],\r\n    \"category\": \"kids\",\r\n    \"Stock\": 27\r\n  }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/api/shoes/collections"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete shoes",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:5000/api/shoes/collections/66842c2b1c8594daae187368"
+			},
+			"response": []
+		},
+		{
+			"name": "Update shoes",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"name\": \"kuch bhi\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/api/shoes/collections/66842c5c8aff228ef4bd2931"
+			},
+			"response": []
+		},
+		{
+			"name": "Fetching specific category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:5000/api/shoes/collections/kids"
+			},
+			"response": []
+		},
+		{
+			"name": "Signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"admin1\",\r\n    \"email\": \"admin1@gmail.com\",\r\n    \"role\": \"admin\",\r\n    \"password\": \"mazahir123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/api/signup/register"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin1@gmail.com\",\r\n    \"password\": \"mazahir123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:5000/api/signup/login"
+			},
+			"response": []
+		}
+	]
+}

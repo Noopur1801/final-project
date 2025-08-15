@@ -1,0 +1,30 @@
+[{
+  "_id": {
+    "$oid": "66c8eb8bd695340b9dbf5da6"
+  },
+  "name": "Prachi Singh",
+  "email": "prachisingh@gmail.com",
+  "address": "26, Shree Vinayak Nagar Titardi, Udaipur",
+  "password": "$2a$12$ajHcJrcTEfN7pPJ46HzpKePrSxq.0Sk25UEBvpiyzLeMLhPvnLjfi",
+  "profilePicture": "prachi_1724443531852.jpeg",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2024-08-23T20:05:31.857Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66c8ec825dafb2084031151e"
+  },
+  "name": "Noopur Maheshwari",
+  "email": "noopurmaheshwari@gmail.com",
+  "address": "Bohra Ganesh Ji, Udaipur",
+  "password": "$2a$12$orIYjw8euqX./6nlngWUwechNoTOcCFQ5HodNRAcy2XlFIkNsnmB.",
+  "profilePicture": "noopur_1724443778557.jpeg",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2024-08-23T20:09:38.564Z"
+  },
+  "__v": 0
+}]

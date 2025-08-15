@@ -1,0 +1,391 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  background: none;
+  font: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+img,
+ion-icon,
+button,
+a {
+  display: block;
+}
+
+span {
+  display: inline-block;
+}
+
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+
+input {
+  display: block;
+  width: 100%;
+  font: inherit;
+}
+
+input::placeholder {
+  font: inherit;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  position: relative;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.95);
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
+
+.field-editor {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 111;
+  /* background-color: red; */
+  display: none;
+}
+
+.field-editor.active {
+  display: block;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20fr 80fr;
+  grid-template-columns: 1fr;
+}
+
+.side-bar,
+.main-area {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.side-bar {
+  transition: all 0.3s ease-in;
+}
+
+.side-panel-open {
+  transition: all 0.3s ease-in;
+}
+
+i {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 42px;
+  color: #000;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.side-bar {
+  background-color: cornsilk;
+  border-right: 3px solid #000;
+  height: fit-content !important;
+}
+
+h1 {
+  text-align: center;
+  padding: 1rem;
+  color: #000;
+  letter-spacing: 2px;
+  font-size: 2rem;
+}
+
+.side-bar ul {
+  display: flex;
+  /* flex-direction: column; */
+  gap: 5rem;
+  font-size: 1.2rem;
+  /* padding: 2rem 0rem 5rem; */
+  font-weight: 900;
+  letter-spacing: 1px;
+  width: 100%;
+  justify-content: space-around;
+  padding-bottom: 2px;
+}
+
+.side-bar li {
+  padding: 1rem 2.5rem;
+  border-right: 3px solid #000;
+  border-left: 3px solid #000;
+  border-bottom: 3px solid #000;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.side-bar li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.side-bar li.active {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(255, 127, 80, 0.8);
+  filter: brightness(120%);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  padding: 8px;
+  border: 2px solid #000;
+  text-align: left;
+  font-size: 2rem;
+}
+
+table th {
+  background-color: #f2f2f2;
+  font-weight: 900;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background-color: #ddd;
+}
+
+table img {
+  border: 1px solid #000;
+  height: 80px;
+  width: 120px;
+  aspect-ratio: 16/9;
+  filter: brightness(110%) contrast(105%);
+  object-fit: cover;
+}
+
+table button {
+  border: 1px solid #000;
+  padding: 0.5rem 1rem;
+  margin: 0.4rem;
+}
+
+table button:hover {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.dis-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  cursor: pointer;
+  padding: 3rem 0;
+  border: none;
+}
+
+h3 {
+  font-size: 3.2rem;
+  text-align: center;
+  letter-spacing: 2px;
+
+  padding: 5rem 0 0;
+}
+
+ion-icon {
+  font-size: 3rem;
+}
+
+/* Style for form fields */
+
+.field-editor,
+.new-form {
+  max-height: 90%;
+}
+
+.field-editor form,
+.new-form {
+  display: flex;
+  flex-direction: column;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+.new-form {
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.field-editor label,
+.new-form label {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+  margin-top: 1rem;
+}
+
+.new-form label {
+  color: #000;
+}
+
+.field-editor input[type="text"],
+.new-form input[type="text"],
+.file-upload,
+.field-editor input,
+.new-form input,
+.field-editor textarea,
+.field-editor select,
+.new-form textarea,
+.new-form select {
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 2.2rem;
+}
+
+.file-upload {
+  background-color: #fff;
+}
+
+.field-editor button,
+.new-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.field-editor button:hover,
+.new-form button:hover {
+  background-color: #0056b3;
+}
+
+.new-form .extend {
+  padding: 1rem 8px 4rem;
+}
+
+.field-editor {
+  overflow-y: scroll;
+}
+
+.main-area::-webkit-scrollbar,
+.main-area::-webkit-scrollbar-horizontal {
+  width: 8px;
+}
+
+.side-bar::-webkit-scrollbar,
+.field-editor::-webkit-scrollbar {
+  width: 2px;
+}
+
+.main-area::-webkit-scrollbar-track,
+.side-bar::-webkit-scrollbar-track {
+  background: #fff;
+  border-left: 1px solid #000;
+}
+
+.side-bar::-webkit-scrollbar-track,
+.field-editor::-webkit-scrollbar-track {
+  background: transparent;
+  border: none;
+}
+
+.main-area::-webkit-scrollbar-thumb,
+.side-bar::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.side-bar::-webkit-scrollbar-thumb {
+  background: aquamarine;
+}
+
+.field-editor::-webkit-scrollbar-thumb {
+  background: #fff;
+  border-radius: 10px;
+}
+
+.field-editor::-webkit-scrollbar {
+  width: 10px;
+}
+
+.field-editor {
+  padding: 0 10px;
+}
+
+.main-area::-webkit-scrollbar-thumb:hover,
+.side-bar::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.side-bar::-webkit-scrollbar-thumb:hover,
+.field-editor::-webkit-scrollbar-thumb:hover {
+  background: aquamarine;
+}
+
+.text-area {
+  border: 1px solid #000;
+  height: 180px;
+  width: 350px;
+  font-size: 16px;
+  padding: 4px 0 4px 8px;
+  text-align: left;
+}
+
+.out-line {
+  height: 200px;
+}
+
+.out-line:focus,
+.out-line:focus-visible {
+  outline: none;
+}
+
+.admin-picture {
+  filter: brightness(110%) contrast(105%);
+  border: 4px solid #000;
+}

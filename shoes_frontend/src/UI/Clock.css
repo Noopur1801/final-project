@@ -1,0 +1,68 @@
+/* src/Components/Pages/Clock.css */
+
+.clock__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  /* background-color: #f7f3f3; */
+  border-radius: 15px;
+}
+
+.clock__data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.clock__data .text-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-white {
+  color: #b27a7a;
+}
+
+.fs-3 {
+  font-size: 2rem;
+}
+
+.fs-6 {
+  font-size: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.gap-3 {
+  gap: 0.75rem;
+}
+.text-black {
+  color: black !important;
+}
+
+.clock__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.clock__data {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.clock__data .text-center h1,
+.clock__data .text-center h5 {
+  color: black !important; /* Ensure the color is applied */
+}
+
+.clock__data span {
+  color: black !important; /* Ensure the colon is also black */
+}

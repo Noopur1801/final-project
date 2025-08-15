@@ -1,0 +1,283 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+}
+/* html,body{
+    overflow-x: hidden;
+    overflow-y: visible;
+} */
+
+.main-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    color: azure;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.title > p {
+    color: brown;
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.pa {
+    color: white !important;
+}
+
+.title-para-and-button {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.title-para-and-button p {
+    font-size: 20px;
+}
+
+.title-button button, .login-signin button, .visit-store button {
+    background: linear-gradient(to right, #6a11cb, #fc2525);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background 0.3s ease;
+    margin: 10px auto;
+}
+
+button:hover {
+    background: linear-gradient(to right, #5a0eb7, #1f63e2);
+}
+
+.video-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(7, 7, 7);
+    padding: 20px;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    overflow: auto;
+    z-index: 1000; /* Ensure it appears above other content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow for depth */
+}
+
+.video-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Ensure the overlay is beneath the video popup */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 1200px) {
+    .main-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .title-para-and-button {
+        width: 80%;
+    }
+
+    .main-title {
+        align-items: center;
+    }
+
+    .title > p {
+        font-size: 35px;
+    }
+
+    .title-para-and-button p {
+        font-size: 18px;
+    }
+
+    .title-button button, .login-signin button, .visit-store button {
+        font-size: 22px;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .title > p {
+        font-size: 30px;
+    }
+
+    .title-para-and-button p {
+        font-size: 16px;
+    }
+
+    .title-button button, .login-signin button, .visit-store button {
+        font-size: 20px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        height: auto;
+    }
+
+    .main-box {
+        flex-direction: column;
+    }
+
+    .main-title {
+        align-items: center;
+    }
+
+    .title-para-and-button {
+        width: 90%;
+    }
+
+    .title > p {
+        font-size: 25px;
+    }
+
+    .title-para-and-button p {
+        font-size: 15px;
+    }
+
+    .title-button button, .login-signin button, .visit-store button {
+        font-size: 18px;
+        padding: 10px 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .title > p {
+        font-size: 22px;
+    }
+
+    .title-para-and-button p {
+        font-size: 14px;
+    }
+
+    .title-button button, .login-signin button, .visit-store button {
+        font-size: 16px;
+        padding: 10px 10px;
+    }
+
+    .video-popup {
+        padding: 10px;
+    }
+}
+
+.head-container img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.head-container .shoes-img {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    position: relative; /* Or as needed */
+    top: 0; /* Adjust as needed */
+    right: 0; /* Adjust as needed */
+}
+
+/* Media Queries for Shoes Image */
+
+@media (max-width: 1200px) {
+    .head-container .shoes-img {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .head-container .shoes-img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .head-container .shoes-img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .head-container .shoes-img {
+        width: 40%;
+    }
+}
+.no-scroll {
+    overflow: hidden;
+  }
+  
+  /*query of landing page image*/
+
+/* .lpimage{
+    width: 80%;
+    height: auto;
+    position: relative;
+    top: 0;
+    right: 0;
+} */
+
+.title-img{
+    max-width: 60%;
+}
+@media (max-width:100%){
+    .lpimage {
+        width: 70%;
+        height: 60%;
+        position: fixed;
+    }
+}
+
+@media (max-width: 80%) {
+    .lpimage {
+        width: 60%;
+        height:55%;
+    }
+}
+
+@media (max-width: 60%) {
+    .lpimage {
+        width: 40%;
+        height: 35%;
+    }
+}
+
+@media (max-width: 40%) {
+    .lpimage {
+        width: 30%;
+        height:25%;
+    }
+}
+
+@media (max-width: 20%) {
+    .lpimage {
+        width: 15%;
+        height:10%;
+    }
+}
